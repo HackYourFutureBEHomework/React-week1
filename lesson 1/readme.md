@@ -15,8 +15,6 @@
 
 - How to
 
-- Question: 
-
 ### Render Elements
 
 - [Info](https://reactjs.org/docs/rendering-elements.html)
@@ -35,6 +33,9 @@
 
 - [Create react app](https://github.com/facebook/create-react-app)
 
+### List & Keys
+
+- [Info](https://reactjs.org/docs/lists-and-keys.html#rendering-multiple-components)
 
 ### Notes
 
@@ -43,26 +44,24 @@
 
 ## Examples
 
-### Hello World
+### Hello World [link](https://github.com/HackYourFutureBelgium/React-week1/blob/master/lesson%201/helloworld.html)
 
 - Create element
 
-### Clock
+### Clock [link](https://github.com/HackYourFutureBelgium/React-week1/blob/master/lesson%201/helloworld.html)
 
 - Render element
 
 - Update element
 
-### Movie list
+### Movie list [link](https://github.com/HackYourFutureBelgium/React-week1/blob/master/lesson%201/helloworld.html)
 
 - Create component
 
 - Reuse Movie component
 
 
-## In-Class Github repo list
-
-### TODOs
+### In-Class Github repo list [link](https://github.com/HackYourFutureBelgium/React-week1/tree/master/lesson%201/my-github-repo-app)
 
 - create react app 
     - `npx create-react-app my-github-repo-app`
