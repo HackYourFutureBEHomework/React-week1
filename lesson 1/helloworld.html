@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <!-- Add this to add react and react-dom  -->
+        <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+
+        <!-- Add this to change es6 code to es5 -->
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js" crossorigin></script>
+    </head>
+    <body>
+        <!-- Hello someone -->
+        <div id='root'></div>
+        <div id='time'></div>
+        <div id='list'></div>
+
+        <script type="text/babel">
+            
+            /* First part root */
+
+            // variable we're going to use to say hello to
+            const name = "David" 
+            
+            // element we create with JSX
+            const element = <a href="www.hackyourfuture.be">
+                <h1>Hello {name}</h1>
+            </a>
+            
+            // Render the element in the div with id 'root'
+            ReactDOM.render(
+                element,
+                document.getElementById('root')
+            );
+
+
+            /* Second part time */
+
+            // function that displays the time in div with id 'time'
+            const tick = function () {
+
+                // variable with a date string
+                const time = new Date().toLocaleTimeString()
+
+                // element we create with JSX
+                const timeElement = <div>It is {time}.</div>
+
+                // Render timeElement in the div with id 'time'
+                ReactDOM.render(timeElement, document.getElementById('time'))
+            }
+            
+            // run tick function
+            tick()
+
+            // run tick function every 1000 milliseconds or every sec
+            setInterval(tick,1000)
+
+
+            /* Thirt part list*/
+
+            // Movie component
+            function Movie (props) {
+                // returns an element and uses the date stored in props
+                // props can contain a name and/or imageSource
+                return <li className="test">
+                    <img src={props.imageSource}/>
+                    {props.name}
+                </li>
+            }
+
+            // our list element build from Movie components
+            const listElement = <ul>
+                <Movie name="Inception" imageSource="https://place-hold.it/80x80"/>
+                <Movie name="Star Wars"/>
+                <Movie name="Pulp Fiction"/>
+            </ul>
+
+            // Render listElement in the div with id 'list'
+            ReactDOM.render(listElement, document.getElementById('list'))
+        </script>
+    </body>
+</html>
